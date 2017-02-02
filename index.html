@@ -1,148 +1,50 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<link rel="icon" href="images/icon.jpg">
-	<title>Inicio</title>
-	<link rel="stylesheet" href="style/main.css">
-	<link rel="stylesheet" href="style/style.css">
-	<link href="https://fonts.googleapis.com/css?family=Lato|Nunito|Raleway|Titillium+Web" rel="stylesheet">	
-	<link href="https://fonts.googleapis.com/css?family=Bitter|Overpass+Mono|Passion+One|Roboto+Mono|Roboto+Slab|Share+Tech+Mono|Slabo+27px|VT323|Voces" rel="stylesheet">
-	<script src="js/jquery.js"></script>
-	
-	<script>
-			$(document).ready(function(){
-				$("a").on('click', function(event) {
-					if (this.hash != ""){
-						event.preventDefault();
-						var hash = this.hash;
-						$('html, body').animate({
-							scrollTop: $(hash).offset().top
-						}, 800, function(){
-						window.location.hash = hash;
-						});
-					}
-				});
-				//Fin de la funcion del smooth scrolling
-
-
-			});
-	</script>
-</head>
-<body>
-	<div id="wrapper">
-		<header>
-			<input id="menu" type="checkbox">
-			<label for="menu">MENU<span class="icon-menu"></span></label>
-			<ul>
-				<li><a class="anchor__menu" href="#perfil">PERFIL</a></li>
-				<li><a class="anchor__menu" href="#desarrollo">DESARROLLO</a></li>
-				<li><a class="anchor__menu" href="#proyectos">PROYECTOS</a></li>
-				<li><a class="anchor__menu" href="#contacto">CONTACTO</a></li>
-			</ul>
-		</header>
-		<div class="logo" id="inicio">
-			<p>SCMDEVELOPER</p>
-		</div>
-		
-		<a href="#perfil" class="bajar" id="bajar"><p>v</p></a>
-
-		<div class="perfil" id="perfil">
-			<div class="image">
-				<img src="images/pruebaprofile.jpg" alt="">
-			</div>
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam magni inventore, veritatis. Soluta dicta porro deleniti molestiae, quas nobis error. Sint animi delectus soluta quisquam accusantium iusto cupiditate vel neque? ipsum dolor sit amet, consectetur adipisicing elit. Magnam illum, ex, inventore at, accusamus rerum repellendus officia dolorum molestiae commodi ad aspernatur itaque quaerat porro quos cum? Ex, alias, sint! ipsum dolor sit amet, consectetur adipisicing elit. Eos, facilis tenetur saepe accusamus quo! Nobis error, similique sunt quo perferendis reprehenderit deserunt! Molestias, id quisquam voluptate, eveniet laborum illo dicta!</p>
-		</div>
-		<div class="planes-desarrollo" id="desarrollo">
-			<div class="contenedor" id="cont1">
-				<div class="carta">
-					<div class="lado frente">
-						<img src="images/plan1.png" alt="">
-					</div>
-					<div class="lado atras">
-						<ul>
-							<li>Responsive y listo para Celulares y tablets.</li>
-							<li>Primer mes de mantenimiento gratuito.</li>
-							<li>Desarrollo completo en 3-4 semanas.</li>
-							<li>$350</li>
-						</ul>
-						<a href="">M&aacute;s Informac&iacute;on</a>
-					</div>
+<html>
+	<head>
+		<script src="jquery-2.0.2.js"></script>
+		<script src="jquery.stellar.min.js"></script>
+		<script>
+			$.stellar();
+		</script>
+		<link rel="stylesheet" href="style/main.css">
+		<title>Parallax</title>
+	</head>
+	<body>
+		<div id="wrapper">
+			<header>
+				<div id="nav">
+					<a href="" class="refer" id="border">Informacion</a>
+					<a href="" class="refer" id="border">Contacto</a>
+					<a href="" class="refer">Opciones</a>
 				</div>
-			</div>
+			</header>
+			<div class="clear"></div>
+			<content>
+					<div id="content1" data-stellar-background-ratio="0.5">
+						<div id="button">
+							<h2>Informaci&oacute;n</h2>
+							<div id="text"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor doloremque molestias impedit, exercitationem doloribus sed expedita quibusdam porro odio, illum tenetur dolore mollitia corrupti aspernatur rerum fugiat cupiditate amet provident!</p></div>
+						</div>
 
-			<div class="contenedor" id="cont2">
-				<div class="carta">
-					<div class="lado frente"><img src="images/plan2.png" alt="">
 					</div>
-					<div class="lado atras">
-						<ul>
-							<li>test1</li>
-							<li>test2</li>
-							<li>test3</li>
-							<li>test4</li>
-						</ul>
-						<a href="">M&aacute;s Informac&iacute;on</a>
+					<div id="content2" data-stellar-background-ratio="0.5">
+						
 					</div>
+					<div id="content3" data-stellar-background-ratio="0.5">
+						
+					</div>
+					<div id="content4" data-stellar-background-ratio="0.5">
+						
+					</div>
+					<div id="content5" data-stellar-background-ratio="0.5">
+						
+					</div>
+			</content>
+			<footer>
+				<div id="foot">
+					<p>Design and development: &copy;<a href="http://scmdeveloper.azurewebsites.net/">SCM Developer</a></p>
 				</div>
-			</div>
-
-			<div class="contenedor" id="cont3">
-				<div class="carta">
-					<div class="lado frente"><img src="images/plan3.png" alt=""></div>
-					<div class="lado atras">
-						<ul>
-							<li>test1</li>
-							<li>test2</li>
-							<li>test3</li>
-							<li>test4</li>
-						</ul>
-						<a href="">M&aacute;s Informac&iacute;on</a>	
-					</div>
-				</div>
-			</div>
+			</footer>
 		</div>
-		<div id="proyectos">
-			<div class="proyecto">
-				<h1>Gym SportCenter</h1>
-				<a href="http://sportcenter.co.cr/"><img src="images/SportCenter.png" alt=""></a>
-				<p>Diseño y desarrollo de la pagina web para la cadena de gimnasions SportCenter.</p>
-			</div>
-			<div class="proyecto">
-				<h1>Los Pilares</h1>
-				<a href="http://serverpreview.azurewebsites.net/"><img src="images/LosPilares.png" alt=""></a>
-				<p>Diseño y desarrollo de la pagina web (En progreso) para Condominio Los Pilares.</p>
-			</div>
-			<div class="proyecto">
-				<h1>Servicash</h1>
-				<a href="http://servicashcostarica.com/"><img src="images/Servicash.png" alt=""></a>
-				<p>Desarrollo de la pagina, sistema de Base de Datos para la casa de empeño Servicash</p>
-			</div>
-		</div>
-		<div id="contacto">
-<<<<<<< HEAD
-<<<<<<< HEAD
-			<form action="php/send_email.php" method="post">
-=======
-
-			<!-- <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeYTwc4R1LDov-BR8bhVwP2hgS9U9TkEwEfD5aK3H6SD2w5iw/viewform?embedded=true" width="760" height="1000" frameborder="0" marginheight="0" marginwidth="0">Cargando...</iframe> -->
-
-			<form action="http://sportcenter.co.cr/php/send_email2.php" method="post">
->>>>>>> origin/master
-=======
-			<form action="">
->>>>>>> parent of 56bc159... Updatedomain
-				<h1>Contacto</h1>
-				<input class="input" type="text" name="Nombre" required="true" placeholder="Nombre">
-				<input class="input" type="email" name="Correo" required="true" placeholder="Correo electronico">
-				<textarea class="input" placeholder="Mensaje"></textarea>
-				<input class="boton" type="submit">
-			</form>
-		</div>
-		<a class="volver" id="volver" href="#inicio">^</a>
-		<footer>
-			<h1>Copyright &copy; SCMdeveloper</h1>
-		</footer>
-		<script src="js/menu.js"></script>
-</body>
+	</body>
 </html>
